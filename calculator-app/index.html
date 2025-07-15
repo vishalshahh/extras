@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        function populateDiv(){
+            const a = document.getElementById("Fn").value
+            const b = document.getElementById("Sn").value
+            const element = document.getElementById("finalsum")
+            element.innerHTML = parseInt(a) + parseInt(b)
+        }
+    </script>
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +17,15 @@
 
 <body>
     <div>
-        <input type="text" placeholder="Enter your first number"></input>
+        <input id="Fn" type="text" placeholder="Enter your first number"></input>
     </div>
     <br>
     <div>
-        <input type="text" placeholder="Enter your second number"></div></input>
+        <input id="Sn" type="text" placeholder="Enter your second number"></div></input>
     </div>
     <br>
-    <button>Calculate</button>
+    <button onclick="populateDiv()">Calculate sum</button> <br> <br>
+    <div id="finalsum"></div>
 </body>
+
 </html>
